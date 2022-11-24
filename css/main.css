@@ -54,7 +54,7 @@ img {
 #header_menu li {
 	display: block;
 	float: left;
-	background: url(../images/menu_separator.png) no-repeat left;
+	/*background: url(../images/menu_separator.png) no-repeat left;*/
 }
 
 #header_menu a {
@@ -78,6 +78,15 @@ img {
 	float: left;
 	border: 1px solid #eee;
 	padding: 10px;
+}
+
+#header_about {
+    width: 900px;
+    height: 350px;
+    margin-top: 30px;
+    float: left;
+    border: 1px solid #eee;
+    padding: 10px;
 }
 
 #header_main_text {
@@ -113,6 +122,14 @@ img {
 	width: 100%;
 	height: 100%;
 }
+
+#header_about_image {
+        float: left;
+        /* background: url(../images/bg_header.png) no-repeat; */
+        width: 100%;
+        height: 100%;
+}
+
 
 #boxy {
 	margin-top: 30px;
@@ -165,4 +182,23 @@ img {
 	padding-left: 5px;
 	color: #ddd;
 }
+
+div.items p:not(:target) {
+    display: none
+    
+}
+
+div.items p:target {
+    display: block
+    
+}
+
+.workout {
+    
+}
+
+
+
+
+
 	
