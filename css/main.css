@@ -20,7 +20,7 @@ body {
 	font-size: 12px;
 	color: #252729;
 	text-align: center;
-	/* background: url(../images/bg_body.png) repeat-x; */
+	background: url(../images/bg_body.png) repeat-x;
 }
 
 #container {
@@ -54,7 +54,7 @@ img {
 #header_menu li {
 	display: block;
 	float: left;
-	/*background: url(../images/menu_separator.png) no-repeat left;*/
+	/* background: url(../images/menu_separator.png) no-repeat left; */
 }
 
 #header_menu a {
@@ -91,11 +91,9 @@ img {
 
 #header_main_text {
 	padding: 5px 10px 5px 10px;
-	/* float: left; */
 	position: relative;
 	text-shadow: #000 0px 1px 0px;
 	margin-top: 276px;
-	/* background: url(../images/bg_text.png); */
 }
 
 #header_main_text h2 {
@@ -103,8 +101,8 @@ img {
 }
 
 #header_main_text p {
-	color: #ffffff;
-	line-height: 20px;
+	color: #000000;
+	/* line-height: 20px; */
 }
 
 #header_main_text a {
@@ -120,14 +118,11 @@ img {
 #header_main_image {
 	float: left;
 	position: relative;
-	/* background: url(../images/bg_header.png) no-repeat; */
 	width: 100%;
-	/* height: 100%; */
 }
 
 #header_about_image {
         float: left;
-        /* background: url(../images/bg_header.png) no-repeat; */
         width: 100%;
         height: 100%;
 }
@@ -198,9 +193,4 @@ div.items p:target {
 .workout {
     
 }
-
-
-
-
-
 	
