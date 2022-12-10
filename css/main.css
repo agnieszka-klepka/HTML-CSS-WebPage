@@ -9,7 +9,7 @@ a:hover {
 }
 
 body {
-	font-family: Arial;
+	font-family: "Times New Roman";
 	font-size: 12px;
 	color: #252729;
 	text-align: center;
@@ -25,6 +25,8 @@ body {
 img {
 	border: none;
 }
+
+/* menu */
 
 #header_logo {
 	float: left;
@@ -47,7 +49,6 @@ img {
 #header_menu li {
 	display: block;
 	float: left;
-	/* background: url(../images/menu_separator.png) no-repeat left; */
 }
 
 #header_menu a {
@@ -64,12 +65,29 @@ img {
 	color: #cccccc;
 }
 
-#header_main {
+/* main page */
+
+#main_page {
 	width: 900px;
-	height: 350px;
+	padding-top: 150px;
+}
+
+#main_page p {
+	font-size: 16px;
+}
+
+#main_page dl {
+	font-size: 16px;
+}
+
+
+/* main */
+
+#header_main.items {
+	width: 950px;
+	height: 500px;
 	margin-top: 30px;
 	float: left;
-	border: 1px solid #eee;
 	padding: 10px;
 }
 
@@ -78,7 +96,6 @@ img {
     height: 350px;
     margin-top: 30px;
     float: left;
-    border: 1px solid #eee;
     padding: 10px;
 }
 
@@ -95,10 +112,18 @@ img {
 	color: #feae31;
 }
 
-#header_main_text p {
-	color: #ffffff;
-	line-height: 20px;
+#main_text {
+	padding: 5px 10px 5px 10px;
+	/* float: left; */
+	position: relative;
+	text-shadow: #000 0px 1px 0px;
+	margin-top: 276px;
 }
+
+/* #header_main_text p {
+	color: #000000;
+	line-height: 20px;
+} */
 
 #header_main_text a {
 	color: #feae31;
@@ -113,18 +138,14 @@ img {
 #header_main_image {
 	float: left;
 	position: relative;
-	/* background: url(../images/bg_header.png) no-repeat; */
 	width: 100%;
-	/* height: 100%; */
 }
 
 #header_about_image {
         float: left;
-        /* background: url(../images/bg_header.png) no-repeat; */
         width: 100%;
         height: 100%;
 }
-
 
 #boxy {
 	margin-top: 30px;
@@ -188,7 +209,89 @@ div.items p:target {
     
 }
 
-.workout {
-    
+/* kalkulatory */
+
+#header_calc {
+	width: 900px;
+	height: 650px;
+	margin-top: 30px;
+	float: left;
+	padding: 10px;
 }
-	
+
+#btn1 {
+	background-color: #f4f7f4;
+  	color: rgb(5, 0, 0);
+  	padding: 10px 18px;
+  	text-align: center;
+	cursor: pointer;
+	border-radius: 15px;
+  	text-decoration: none;
+  	font-size: 12px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#btn2 {
+	background-color: #f4f7f4;
+  	color: rgb(5, 0, 0);
+  	padding: 10px 18px;
+  	text-align: center;
+	cursor: pointer;
+	border-radius: 15px;
+  	text-decoration: none;
+  	font-size: 12px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* galeria filmików z ćwiczeniami */
+
+#header_gallery {
+	width: 900px;
+	height: 480px;
+	margin-top: 30px;
+  display: flex;  
+	float: left;
+  background: rgb(238, 236, 236);
+	border: 1px solid #eee;
+	padding: 10px;
+}
+
+#header_gallery .videos{
+    width: 20%;
+    padding: 10px 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header_gallery  .videos video{
+    width: 95%;
+    height: 100px;
+    margin: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#header_gallery .videos video:nth-child(1){
+    margin-top: 0;
+}
+
+#header_gallery .videos video:hover,
+#header_gallery  .videos .active{
+    transform: scale(1.06);
+    border: 3px solid black;
+}
+
+#header_gallery  .main-video{
+    width: 80%;
+    padding: 10px;
+}
+
+#header_gallery  .main-video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid black;
+}
+ 

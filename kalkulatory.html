@@ -7,120 +7,111 @@
   <title>GYMRATS</title>
   <link rel="stylesheet" type="text/css" href="css/main.css" />
   <script src="script.js" defer></script>
-
-  <style>
-    #loading,
-    #results {
-      display: none;
-    }
-
-    #loading {
-      width: 100%;
-    }
-  </style>
 </head>
 
 <body>
   <div id="container">
 
     <div id="header_logo">
-      <a href="#"><img src="images/logo1.png" alt="Logo" /></a>
+      <a href="#"><img src="images/logo.png" alt="Logo" /></a>
     </div>
     <div id="header_menu">
       <ul>
         <li><a href="strona_glowna.html">Strona główna</a></li>
         <li><a href="o_nas.html">O nas</a></li>
         <li><a href="kalkulatory.html">Kalkulatory</a></li>
-        <li><a href="galeria.html">Ćwiczenia</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="galeria.html">Przykładowe ćwiczenia</a></li>
       </ul>
     </div>
-
+    <!-- <div id="header_main" class="items"> -->
     <div id="header_calc">
-      <!-- KALKULATOR BMI -->
-      <h2>Kalkulator BMI</h2>
-      <p>Wzrost w CM:
-        <input type="text" id="height"><br><span id="height_error"></span>
-      </p>
+        <!-- KALKULATOR BMI -->
+        <h2>KALKULATOR BMI</h2>
 
-      <p>Waga w KG:
-        <input type="text" id="weight"><br><span id="weight_error"></span>
-      </p>
+        <form>
+          <p>Wzrost [CM]:
+            <input type="text" id="height"><br><span id="height_error"></span>
+          </p>
+        
+        <p>Waga [KG]:
+          <input type="text" id="weight"><br><span id="weight_error"></span>
+        </p>
 
-      <button id="btn">Oblicz</button>
-      <p id="output"></p>
-      <t>Wskaźnik masy ciała (Body mass index, w skrócie BMI) określa stosunek wagi ciała do wzrostu. Wyniki pomiaru BMI
-        mogą dać wyobrażenie o tym, czy dana osoba ma odpowiednią wagę do swojego wzrostu. BMI to narzędzie przesiewowe,
-        które może wskazywać, czy dana osoba ma niedowagę lub czy ma zdrową wagę, nadwagę lub otyłość.</t>
-
-      <!-- ---------------------------------------------------------- -->
-      <!-- ---------------------------------------------------------- -->
-      <!-- Kalkulator zapotrzebowania kalorycznego  ----------------- -->
-      <h2>Kalkulator kalorii</h2>
+        <button id="btn1">Oblicz</button>
+        <p id="output"></p>
+        <t>
+          <br>
+          Wskaźnik masy ciała (Body mass index, w skrócie BMI) określa stosunek wagi ciała do wzrostu. Wyniki pomiaru BMI
+          mogą dać wyobrażenie o tym, czy dana osoba ma odpowiednią wagę do swojego wzrostu. BMI to narzędzie przesiewowe,
+          które może wskazywać, czy dana osoba ma niedowagę lub czy ma zdrową wagę, nadwagę lub otyłość.
+        </t>
+      </form>
+        <!-- ---------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------- -->
+        <!-- Kalkulator zapotrzebowania kalorycznego  ----------------- -->
+      <h2>KALKULATOR KALORII</h2>
       <form id="calorie-form">
-        <label for="age">Wiek</label>
-        <input type="number" id="age" placeholder="Wiek między 15-80">
+          <label for="age">Wiek</label>
+          <input type="number" id="age" placeholder="Wiek między 15-80">
 
-        <p></p>
+          <fieldset>
+            <legend>Płeć</legend>
 
-        <fieldset>
-          <legend>Płeć</legend>
+            <div>
+              <input type="radio" id="male" name="customRadioInline1" checked="checked">
+              <label for="male">Mężczyzna</label>
+            </div>
 
-          <div>
-            <input type="radio" id="male" name="customRadioInline1" checked="checked">
-            <label for="male">Mężczyzna</label>
-          </div>
+            <div>
+              <input type="radio" id="female" name="customRadioInline1">
+              <label for="female">Kobieta</label>
+            </div>
 
-          <div>
-            <input type="radio" id="female" name="customRadioInline1">
-            <label for="female">Kobieta</label>
-          </div>
+          </fieldset>
 
-        </fieldset>
+          <p></p>
 
-        <p></p>
+          <label for="weight">Waga</label>
+          <input type="number" id="weight" placeholder="W kilogramach">
 
-        <label for="weight">Waga</label>
-        <input type="number" id="weight" placeholder="W kilogramach">
+          <p></p>
 
-        <p></p>
+          <label for="height">Wzrost</label>
+          <input type="number" id="height" placeholder="W centymetrach">
 
-        <label for="height">Wzrost</label>
-        <input type="number" id="height" placeholder="W centymetrach">
+          <p></p>
 
-        <p></p>
+          <legend>Aktywność fizyczna</legend>
+          <select id="list">
+            <option selected value="1">Siedząca (brak treningów) </option>
+            <option value="2">Lekka aktywność (lekki trening do 3 razy w tygodniu)</option>
+            <option value="3">Średnia aktywność (trening siłowy 3-5 razy w tygodniu)</option>
+            <option value="4">Duża aktywność (Ciężki trening siłowy 5-6 razy w tygodniu)</option>
+            <option value="5">Bardzo duża aktywność (Bardzo cięzkie treningi siłowe 2 razy dziennie)</option>
+          </select>
 
-        <legend>Aktywność fizyczna</legend>
-        <select id="list">
-          <option selected value="1">Siedząca (brak treningów) </option>
-          <option value="2">Lekka aktywność (lekki trening do 3 razy w tygodniu)</option>
-          <option value="3">Średnia aktywność (trening siłowy 3-5 razy w tygodniu)</option>
-          <option value="4">Duża aktywność (Ciężki trening siłowy 5-6 razy w tygodniu)</option>
-          <option value="5">Bardzo duża aktywność (Bardzo cięzkie treningi siłowe 2 razy dziennie)</option>
-        </select>
-
-        <p></p>
-
-        <input type="submit" value="Oblicz">
-
-        <p></p>
+          <p></p>
+          <!-- <input type="submit" value="Oblicz"> -->
+          <button id="btn2" >Oblicz</button>
+          <p></p>
 
       </form>
 
-      <!--       <div id="loading"> -->
-      <!--         <img src="./images/Loading.gif" alt=""> -->
-      <!--       </div> -->
+        <!--       <div id="loading"> -->
+        <!--         <img src="./images/Loading.gif" alt=""> -->
+        <!--       </div> -->
 
-      <div id="results">
-        <h2>Zapotrzebowanie kaloryczne:</h2>
-        <input type="number" id="total-calories" disabled>
-      </div>
-      <t>Zapotrzebowanie kaloryczne określa Ilość kalorii, które muszą być dostarczone do organizmu, aby mógł on
-        normalnie funkcjonować oraz by zachować prawidłową wagę ciała. Za jednostkę przyjmuje się kalorie (kcal). Co
-        ważne, zapotrzebowanie kaloryczne u każdego jest inne. Uzależnione jest ono od: wieku, płci, wagi, trybu życia,
-        oraz aktywności fizycznej.</t>
-      <!-- ---------------------------------------------------------- -->
-      <!-- ---------------------------------------------------------- -->
+        <div id="results">
+          <h2>ZAPOTRZEBOWANIE KALORYCZNE</h2>
+          <input type="number" id="total-calories" disabled>
+        </div>
+        <t>Zapotrzebowanie kaloryczne określa Ilość kalorii, które muszą być dostarczone do organizmu, aby mógł on
+          normalnie funkcjonować oraz by zachować prawidłową wagę ciała. Za jednostkę przyjmuje się kalorie (kcal). Co
+          ważne, zapotrzebowanie kaloryczne u każdego jest inne. Uzależnione jest ono od: wieku, płci, wagi, trybu życia,
+          oraz aktywności fizycznej.</t>
+        <!-- ---------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------- -->
+      
     </div>
     <!-- /* BOXY */ -->
     <div id="boxy">
